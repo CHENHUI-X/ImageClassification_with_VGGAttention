@@ -7,7 +7,8 @@ Implement a VGG-Attention model from scratch and implement classification valida
   - 然后在对应poolling层（3、4）上做attention : elements-wise multiplication ，
   再对每个channel 上的 H和W维度求和
   - 得到对应poolling层（3、4）的长度为C的vector，同时在最后一个poolling层上使用AveragePool
-  （7*7，因为224下采样32倍后，最后一个pooling的输出为7*7*512），这样又得到一个vector（长度为C，属于最后一个poolling层）
+  - AveragePool 的kernel size为 7 * 7，因为224下采样32倍后，最后一个pooling的输出为7 * 7 * 512
+  - 这样又得到一个vector（长度为C，属于最后一个poolling层）
   - 将得到的3个vector Concatenates, 再丢到一个FC中，输出10个类别。
 - 数据与输入输出
   - 其中VGG模型的输入要求224*224
