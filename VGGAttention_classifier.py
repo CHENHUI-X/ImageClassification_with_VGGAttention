@@ -203,10 +203,10 @@ class AttentionBlock(nn.Module):
             g_ = F.interpolate(g_, scale_factor=self.up_factor, mode='bilinear', align_corners=False)
         c = self.phi(F.relu(l_ + g_))  # batch_size x 1 x W x H - attention map
 
-        # compute attn map
+        # compute attn weight map
         if self.normalize_attn:
             #   flatten attention map and make it normalization
-            #  attention map elements sum is 1
+            #  attention weight map elements sum is 1
             a = F.softmax(c.view(N, 1, -1), dim=2).view(N, 1, W, H) # transform to weight
         else:
             # just make attention map elements to [0,1]
