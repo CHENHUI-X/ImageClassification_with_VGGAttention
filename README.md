@@ -1,5 +1,9 @@
 # ImageClassification_with_VGGAttention
 Implement a VGG-Attention model from scratch and implement classification validation on the CIFAR-10 dataset.
+本文大部分代码来自这里：[image-classification-with-attention](https://blog.paperspace.com/image-classification-with-attention/)
+原文采用的是pytorch model中自带的预训练的VGG16模型,而这里则是从头实现VGG模型,然后融合Attention机制.
+当然VGG的实现也是参考了该博客作者的另一篇博客[Writing VGG from Scratch in PyTorch](https://blog.paperspace.com/vgg-from-scratch-pytorch/)
+
 - 实现架构
   - 基本架构为VGG模型，然后添加了一个attention机制
   - 分别使用第3个poolling层的输出和第4个poolling层 与 
