@@ -18,7 +18,7 @@ Implement a VGG-Attention model from scratch and implement classification valida
   - 这样又得到一个vector（长度为C，属于最后一个poolling层，即第5层）
   - 将得到的3个vector Concatenates, 再丢到一个FC中，输出10个类别。
 - 数据与输入输出
-  - 其中VGG模型的输入要求224*224
+  - 其中VGG模型的输入要求224 * 224
   - 数据使用的CIFAR-10数据集，代码中实现自动下载数据，具体细节可以看代码
-  - CIFAR-10数据尺寸为32*32，通过resize变为224*224，所以难免降低了精度，其他具体内容可查看代码
+  - CIFAR-10数据尺寸为32 * 32，通过resize变为224 * 224，所以难免降低了精度，其他具体内容可查看代码
   
